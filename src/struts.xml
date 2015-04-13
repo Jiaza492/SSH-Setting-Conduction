@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+<!-- 解决中文乱码的 -->
+<constant name="struts.i18n.encoding" value="UTF-8"></constant>
+<!-- 必须要package元素增加一个属性 extends 里边的值一定是struts-default -->
+<package name="supermarket" extends="struts-default">
+	<interceptors>
+		<interceptor name="userSessionInterceptor" class="command.filtter.UserSessionInterceptor"></interceptor>
+		<interceptor-stack name="adminStack">
+			<interceptor-ref name="userSessionInterceptor"></interceptor-ref>
+			<interceptor-ref name="defaultStack"></interceptor-ref>
+		</interceptor-stack>
+	</interceptors>
+	
+	<default-interceptor-ref name="adminStack"></default-interceptor-ref>
+	
+	<global-results>
+		<result name="againIndex">index.jsp</result>
+	</global-results>
+	
+	<!-- action的name属性值是你页面form元素action要写的内容 -->
+	<action name="loginAction" class="user.web.LoginAction">
+		<result name="main">/WEB-INF/jsp/main/main.jsp</result>
+		<result name="index">/index.jsp</result>
+		<interceptor-ref name="defaultStack"></interceptor-ref>
+	</action>
+	<action name="mainAction" class="user.web.MainAction">
+		<result name="top">/WEB-INF/jsp/main/top.jsp</result>
+		<result name="right">/WEB-INF/jsp/main/right.jsp</result>
+		<result name="left">/WEB-INF/jsp/main/left.jsp</result>
+	</action>
+</package>
+</struts>    

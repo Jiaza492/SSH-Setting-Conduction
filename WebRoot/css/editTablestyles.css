@@ -1,0 +1,74 @@
+#ajaxtable,.querytable {
+	border: 1px solid black;
+	width: 94%;
+	border-collapse: collapse;
+	padding-top: 3px;
+}
+#ajaxScoreByStuId{
+	margin:5px 0;
+	padding-top: 10px;
+}
+body,table {
+	text-align: center;
+}
+
+#ajaxtable tr th,.querytable tr th {
+	border: 1px solid black;
+	background-color: #A3BAE9;
+}
+
+#ajaxtable tr td ,.querytable tr th{
+	border: 1px solid black;
+}
+.querytable tr td{
+	border: 1px solid black;
+}
+#ajaxtable .odd ,.querytable .odd{
+	background-color: #ECE9D8
+}
+
+#ajaxtable .hove,.querytable .hove {
+	background-color: #fbc2e2;
+}
+.textleft{
+	
+	text-align: left;
+}
+.textright{
+	width:20%;
+	text-align: right;
+}
+.inputtext{
+	border:1px solid #ccc; width:120px; padding:4px 6px;
+}
+.textarea{
+	border:1px solid #ccc; width:320px; height:80px; padding:4px 6px;
+}
+.selecttext{
+	border:1px solid #ccc; width:120px; padding:4px 6px;
+}
+#menu {
+	padding: 0;
+	text-align: center;
+}
+#buttonmenu{
+	line-height:50px;
+	margin:0 auto;
+	width:300px;
+	height:36px;		
+}
+
+#buttontitle{
+	background:	url(../images/hover.png) no-repeat center;
+	margin-left:auto;
+	margin-right:auto;
+	line-height:80px;
+	top:-130px;
+	width:210px;
+	text-align:center;
+	position:relative;
+	display: none;
+}
+
+
+
